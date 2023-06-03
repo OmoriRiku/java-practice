@@ -3,6 +3,6 @@ public class Hero {
   int hp;
 
   public Hero() {
-    System.out.println("Heroのコンストラクタが動作");
+    this.hp = 100;
   }
 }
