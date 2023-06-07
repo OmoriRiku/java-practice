@@ -1,8 +1,7 @@
 public class Main {
   public static void main(String[] args) {
-    Dancer h = new Dancer();
-    h.name = "ミナト";
+    Book b = new Book("スッキリわかるJava入門", 3000, "青", "978-4-295-00780-7");
     
-    h.dance();
+    System.out.println(b.name);
   }
 }
