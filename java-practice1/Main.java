@@ -1,15 +1,14 @@
 public class Main {
   public static void main(String[] args) {
-    int[] scores = new int[] {20, 30, 40, 50, 70};
-    int sum = 0;
+    int[] scores = {30, 40, 50, 66, 40};
+    int count = 0;
     
-    for (int i = 0; i < scores.length; i++) {
-      sum += scores[i];
+    for (int value : scores) {
+      if (value >= 50) {
+        count++;
+      }
     }
     
-    int avg = sum / scores.length;
-    
-    System.out.println("合計点：" + sum);
-    System.out.println("平均点：" + avg);
+    System.out.println(count);
   }
 }
