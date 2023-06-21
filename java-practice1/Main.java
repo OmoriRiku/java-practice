@@ -1,5 +1,15 @@
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    int[] scores = new int[] {20, 30, 40, 50, 70};
+    int sum = 0;
+    
+    for (int i = 0; i < scores.length; i++) {
+      sum += scores[i];
+    }
+    
+    int avg = sum / scores.length;
+    
+    System.out.println("合計点：" + sum);
+    System.out.println("平均点：" + avg);
   }
 }
