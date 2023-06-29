@@ -1,14 +1,24 @@
 public class Main {
   public static void main(String[] args) {
-    int[] scores = new int[] {27, 37, 47, 50, 57};
-    int count = 0;
+    int count = new java.util.Random().nextInt(10) + 1;
     
-    for (int value : scores) {
-      if (value >= 50) {
-        count++;
+    System.out.println("数値を入力してください");
+    for (int i = 0; i < 5; i++) {
+      int input = new java.util.Scanner(System.in).nextInt();
+      
+      if (count == input) {
+        System.out.println("アタリ！");
+        break;
+      } else {
+        System.out.println("違います。");
+        if (input > count) {
+          System.out.println("小さな値です。");
+        } else if (input < count) {
+          System.out.println("大きな値です。");
+        }
       }
     }
     
-    System.out.println("50点以上の科目：" + count);
+    System.out.println("終了します。");
   }
 }
