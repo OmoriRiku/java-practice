@@ -1,24 +1,31 @@
 public class Main {
   public static void main(String[] args) {
-    int count = new java.util.Random().nextInt(10) + 1;
+    int season = new java.util.Scanner(System.in).nextInt();
     
-    System.out.println("数値を入力してください");
-    for (int i = 0; i < 5; i++) {
-      int input = new java.util.Scanner(System.in).nextInt();
-      
-      if (count == input) {
-        System.out.println("アタリ！");
+    switch (season) {
+      case 3:
+      case 4:
+      case 5:
+        System.out.println("春です");
         break;
-      } else {
-        System.out.println("違います。");
-        if (input > count) {
-          System.out.println("小さな値です。");
-        } else if (input < count) {
-          System.out.println("大きな値です。");
-        }
-      }
+      case 6:
+      case 7:
+      case 8:
+        System.out.println("夏です。");
+        break;
+      case 9:
+      case 10:
+      case 11:
+        System.out.println("秋です。");
+        break;
+      case 12:
+      case 1:
+      case 2:
+        System.out.println("冬です。");
+        break;
+      default:
+        System.out.println("1~12の数値を入力してください");
+        break;
     }
-    
-    System.out.println("終了します。");
   }
 }
